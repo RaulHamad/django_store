@@ -1,5 +1,6 @@
 
 from Book_store.models.book.book import *
+from Book_store.models.category.category import *
 from django.db import models
 
 
@@ -16,6 +17,7 @@ class Book(models.Model):
     download = models.FileField(upload_to="%Y/%m/%d",null=True,blank=True)
     quantity = models.IntegerField(default = 10)
     status = models.BooleanField(default=True)
+    category = models.ManyToManyField(Category, blank=True,related_name='Category')
 
 
 

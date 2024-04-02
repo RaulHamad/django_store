@@ -1,5 +1,11 @@
 from django.shortcuts import render
+from Book_store.models.category.category import Category
 
 
 def home(request):
-    return render(request,"home.html")
+    category = Category.objects.all()
+    context = {"category": category}
+
+
+
+    return render(request,"home.html", context=context)
