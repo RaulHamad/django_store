@@ -4,7 +4,8 @@ from Book_store.models.category.category import Category
 
 def home(request):
     category = Category.objects.all()
-    context = {"category": category}
+    len_category = len(category)
+    context = {"category": category, 'len_category': len_category}
 
 
 
