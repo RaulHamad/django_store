@@ -12,19 +12,18 @@
 
 <div id="carouselExampleCaptions" class="carousel slide" >
  
-  <div class="container text-center">
-    <div class="row align-items-start">
-      <div class="col"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+  
   <div class="carousel-inner">
     {% for cat in category %}
     <div class="carousel-item active ">
-      <img src="media/{{cat.category}}" class="d-block w-100" "  alt="..." >
-      <div class="carousel-caption d-none d-md-block"style="font-weight: bold; font-size: 30px;">
+      <a href="#"><img src="media/{{cat.category}}" class="d-block w-100" style="max-height:600px;"  alt="photo" ></a>
+      <div class="carousel-caption d-none d-md-block"style="font-weight: bold; font-size: 40px;">
         <h1>{{cat.name}}</h1>
         <p>{{cat.about}}</p>
+         
       </div>
     </div> {% endfor %}   
-  </div></div></div>
+  
   
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -36,6 +35,14 @@
   </button>
 </div>
 
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 
  {% endblock %}
 
